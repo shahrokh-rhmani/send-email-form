@@ -21,7 +21,7 @@ def sendmail(request):
 
     context = {
         'form': form,
-        'messageSent':messageSent,
+        'messageSent':message_sent,
     }
 
     return render(request, 'index.html', context)
