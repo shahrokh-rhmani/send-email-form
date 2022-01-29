@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Send Mail</title>
+  </head>
+  <body>
+    {% if messageSent %}
+      <h3>Email Successfully sent</h3>
+      <p>your message was successfully sent to {{form.cleaned_data.to}}</p>
+      {% else %}
+        <h3>send email</h3>
+        <form class=""  method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <br>
+          <input type="submit" name="" value="send email">
+
+        </form>
+    {% endif %}
+
+  </body>
+</html>
