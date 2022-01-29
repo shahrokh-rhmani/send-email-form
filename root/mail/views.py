@@ -12,7 +12,7 @@ def sendmail(request):
             cd = form.cleaned_data
             subject = 'send an email'
             message = cd['message']
-            send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [cd['recipient']])
+            send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [cd['reci']])
 
             message_sent = True
 
